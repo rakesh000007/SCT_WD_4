@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 My To-Do List</h1>
+    
+    <!-- Task Form -->
+    <form id="task-form" autocomplete="off">
+      <input 
+        type="text" 
+        id="task-input" 
+        placeholder="Enter task..." 
+        required 
+        aria-label="Task Description"
+      />
+      <input 
+        type="datetime-local" 
+        id="task-datetime" 
+        required 
+        aria-label="Task Date and Time"
+      />
+      <select id="task-category" required aria-label="Task Category">
+        <option value="" disabled selected>Select Category</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Fitness">Fitness</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Study">Study</option>
+        <option value="Others">Others</option>
+      </select>
+      <button type="submit" class="add-btn">Add Task</button>
+    </form>
+
+    <!-- Filter & Actions -->
+    <div id="filter-section" class="filter">
+      <label for="date-filter">📅 Filter by date:</label>
+      <input type="date" id="date-filter" />
+    </div>
+
+    <div class="buttons">
+      <button id="clear-tasks-btn" class="clear-btn">🗑️ Clear All Tasks</button>
+      <button id="theme-toggle" class="toggle-btn">🌓 Toggle Dark Mode</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

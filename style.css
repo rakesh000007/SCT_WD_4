@@ -1,0 +1,258 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c2f0f7, #fce1ec);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background 0.5s ease;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4a4aff;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+input:focus,
+select:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #4a4aff40;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Button Variants */
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.clear-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.toggle-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Task List Styling */
+ul#task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+#task-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.7;
+}
+
+/* Action buttons inside each task */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.actions button:hover {
+  background: #ddd;
+}
+
+/* Filter and small text */
+.filter {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+small {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #1e1e2f, #2b2b3c);
+  color: #f5f5f5;
+}
+
+body.dark-mode .container {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px #88aaff;
+}
+
+body.dark-mode #task-list li {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .actions button {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+body.dark-mode .actions button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+body.dark-mode small {
+  color: #ccc;
+}
+
+/* Base select styling */
+select {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Style for dark mode */
+body.dark-mode select {
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #777;
+}
+
+/* Optional: Improve dropdown item visibility */
+body.dark-mode select option {
+  background-color: #222;
+  color: #fff;
+}
+body.dark-mode select:focus {
+  box-shadow: 0 0 5px #4a4aff;
+}
+/* Category-specific styling */
+li.work span {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+li.personal span {
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+li.shopping span {
+  background-color: #00cec9;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+li.fitness span {
+  background-color: #55efc4;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+li.groceries span {
+  background-color: #ffeaa7;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+li.study span {
+  background-color: #fab1a0;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+li.others span {
+  background-color: #dfe6e9;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+body.dark-mode li.work span { background-color: #ff7675; }
+body.dark-mode li.personal span { background-color: #a29bfe; }
+
